@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Affordable and professional web design">
+  <meta name="keywords" content="web design, affordable web design, professional web design">
+  <meta name="author" content="Brad Traversy">
+  <title>WG05A Web Report | Test Summary</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['TSYS RM3', 1],
+        ['TSYS FC', 29],
+        ['RCFeed', 8]
+      ]);
+
+      var options = {
+        title: 'Modules'
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+	  
+	  var data2 = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Passed', 26],
+        ['Failed', 2],
+        ['NoRun', 8],
+		['Blocked', 2]
+      ]);
+
+      var options2 = {
+        title: 'Test Cases'
+      };
+
+      var chart2 = new google.visualization.PieChart(document.getElementById('piechart2'));
+
+      chart2.draw(data2, options2);
+	  
+	  
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div id="branding">
+        <h1><span class="highlight">WG05A</span> Test Report</h1>
+      </div>
+      <nav>
+        <ul>
+          <li class="current"><a href="index.html">Test Summary</a></li>
+          <li><a href="observations.html">Observations</a></li>
+          <li><a href="challenges.html">Challenges</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="showcase">
+    <div class="container">
+      <h1>WG05A Test Execution Summary Cy-1</h1>
+    </div>
+    <div style="overflow-x:auto;">
+      <table class="center">
+        <tr>
+          <th>Test Execution Start date : </th>
+          <td>04-Jan-2021</td>
+        </tr>
+        <tr>
+          <th>Execution Summary as on : </th>
+          <td>11-Dec-2020</td>
+        </tr>
+      </table>
+    </div>
+&nbsp
+&nbsp
+&nbsp
+    <div style="overflow-x:auto;">
+      <table class="center">
+        <tr>
+          <th></th>
+          <th>Total Testcases</th>
+          <th>Passed</th>
+          <th>Failed</th>
+          <th>No Run</th>
+          <th>Blocked</th>
+        </tr>
+        <tr>
+          <th>TSYS RM3</th>
+          <td>1</td>
+          <td>1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>TSYS FC</th>
+          <td>29</td>
+          <td>29</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <th>RC Feed</th>
+          <td>8</td>
+          <td>8</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+		<tr>
+          <th>Total</th>
+          <td>38</td>
+          <td>26</td>
+          <td>2</td>
+          <td>8</td>
+          <td>2</td>
+        </tr>
+      </table>
+&nbsp
+&nbsp
+&nbsp
+    </div>
+
+    <div id="piechart" style="width: 500px; height: 300px; display: inline-block;"></div>
+	<div id="piechart2" style="width: 500px; height: 300px; display: inline-block;"></div>
+
+  </section>
+
+  <section id="newsletter">
+    <div class="container">
+      <h1>Share the Test Summary with</h1>
+      <form>
+        <input type="email" placeholder="Enter Email IDs...">
+        <button type="submit" class="button_1">Send</button>
+      </form>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>IBM Web Report, Copyright &copy; 2020</p>
+  </footer>
+</body>
+
+</html>
